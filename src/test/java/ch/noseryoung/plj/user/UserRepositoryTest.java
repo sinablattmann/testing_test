@@ -21,7 +21,7 @@ public class UserRepositoryTest {
   private UserRepository userRepository;
 
   @Test
-  public void whenFindByName_thenReturnUser() {
+  public void whenFindByLastName_thenReturnUser() {
 
     User user = new User("sina", "blattmann");
     entityManager.persist(user);
