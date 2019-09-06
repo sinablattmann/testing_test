@@ -27,7 +27,7 @@ public class UserRepositoryTest {
     entityManager.persist(user);
     entityManager.flush();
 
-    User found = userRepository.findByName(user.getLastName());
+    User found = userRepository.findByLastName(user.getLastName());
 
     assertEquals(user.getLastName(), found.getLastName());
   }
