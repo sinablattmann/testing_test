@@ -25,6 +25,6 @@ dependencies {
 
 sonarqube{
 	properties{
-		property 'sonar.projectKey', 'sinablattmann_devops_test'
+		property 'sonar.projectKey', 'sinablattmann_testing_test'
 	}
 }

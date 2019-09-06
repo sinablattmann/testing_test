@@ -6,10 +6,11 @@ addons:
   sonarcloud:
     organization: "sinablattmann"
     token:
-      secure: "1241c7d76672b99fca605b32ad575064d3fb19eb"
+      secure: "0d2222ac0813f330a416909fb0363b044b065eef"
 
 jdk:
-    - openjdk11
+  - openjdk11
 
 script:
-    - ./gradlew sonarqube
+  - ./gradlew sonarqube
+
