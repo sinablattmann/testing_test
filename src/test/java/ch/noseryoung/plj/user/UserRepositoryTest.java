@@ -21,7 +21,7 @@ public class UserRepositoryTest {
   private UserRepository userRepository;
 
   @Test
-  public void whenFindByName_thenReturnCity() {
+  public void whenFindByName_thenReturnUser() {
     //given
 
     User user = new User("sina", "blattmann");
