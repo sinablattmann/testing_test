@@ -22,16 +22,13 @@ public class UserRepositoryTest {
 
   @Test
   public void whenFindByName_thenReturnUser() {
-    //given
 
     User user = new User("sina", "blattmann");
     entityManager.persist(user);
     entityManager.flush();
 
-    //when
     User found = userRepository.findByName(user.getLastName());
 
-    //then
     assertEquals(user.getLastName(), found.getLastName());
   }
 
