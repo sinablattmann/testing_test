@@ -1,0 +1,15 @@
+language: java
+sudo: false
+install: true
+
+addons:
+  sonarcloud:
+    organization: "sinablattmann"
+    token:
+      secure: "1241c7d76672b99fca605b32ad575064d3fb19eb"
+
+jdk:
+    - openjdk11
+
+script:
+    - ./gradlew sonarqube
