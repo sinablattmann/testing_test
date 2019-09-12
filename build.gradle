@@ -21,6 +21,10 @@ dependencies {
 	compile 'org.springframework.boot:spring-boot-starter-tomcat'
 	compile 'org.springframework.boot:spring-boot-starter-data-jpa'
 	compile "org.postgresql:postgresql:42.2.6"
+	// AssertJ
+	testCompile "org.assertj:assertj-core:3.13.2"
+	// H2 Database Engine
+	testCompile "com.h2database:h2:1.4.199"
 	testCompile 'org.springframework.boot:spring-boot-starter-test'
 	testCompile 'org.springframework.security:spring-security-test'
 }
