@@ -1,4 +1,4 @@
-package ch.noseryoung.plj.testing_test;
+package ch.noseryoung.plj;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
