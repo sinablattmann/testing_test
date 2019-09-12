@@ -21,14 +21,13 @@ public class UserRepositoryIntegrationTest {
   private UserRepository userRepository;
 
   @Test
-  public void whenFindByName_thenReturnEmployee() {
+  public void whenFindByLastName_thenReturnUser() {
     User user = new User("sina", "blattmann");
     entityManager.persist(user);
     entityManager.flush();
 
     User found = userRepository.findByLastName(user.getLastName());
 
-    // then
     assertEquals(found.getLastName(), user.getLastName());
   }
 
