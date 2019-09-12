@@ -7,7 +7,6 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import static org.junit.Assert.*;
 
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
@@ -22,16 +21,14 @@ public class UserRepositoryIntegrationTest {
 
   @Test
   public void whenFindByName_thenReturnEmployee() {
-    // given
+
     User alex = new User();
     alex.setFirstName("Alex");
     entityManager.persist(alex);
     entityManager.flush();
 
-    // when
     User found = userRepository.findByFirstName(alex.getFirstName());
 
-    // then
     assertEquals(found.getFirstName(), alex.getFirstName());
   }
 }
