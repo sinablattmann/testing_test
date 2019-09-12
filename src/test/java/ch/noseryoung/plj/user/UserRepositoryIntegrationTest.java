@@ -7,15 +7,16 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
-import org.springframework.test.context.TestPropertySource;
+import static org.junit.Assert.*;
+
 import org.springframework.test.context.junit4.SpringRunner;
 
-import static junit.framework.TestCase.assertEquals;
+import java.util.List;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
-@TestPropertySource(locations = "classpath:application-test.properties")
 public class UserRepositoryIntegrationTest {
+
   @Autowired
   private TestEntityManager entityManager;
 
@@ -23,15 +24,17 @@ public class UserRepositoryIntegrationTest {
   private UserRepository userRepository;
 
   @Test
-  public void whenFindByLastName_thenReturnUser() {
-    User user = new User("sina", "blattmann");
-    entityManager.persist(user);
+  public void whenFindByName_thenReturnEmployee() {
+    // given
+    User alex = new User();
+    alex.setFirstName("Alex");
+    entityManager.persist(alex);
     entityManager.flush();
 
-    User found = userRepository.findByLastName(user.getLastName());
+    // when
+    User found = userRepository.findByFirstName(alex.getFirstName());
 
-    assertEquals(found.getLastName(), user.getLastName());
+    // then
+    assertEquals(found.getFirstName(), alex.getFirstName());
   }
-
 }
-
