@@ -11,8 +11,6 @@ import static org.junit.Assert.*;
 
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.List;
-
 @RunWith(SpringRunner.class)
 @DataJpaTest
 public class UserRepositoryIntegrationTest {
